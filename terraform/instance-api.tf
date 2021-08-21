@@ -29,7 +29,7 @@ resource "aws_security_group" "api-instance" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  tags {
+  tags = {
     Name = "example-instance"
   }
 }

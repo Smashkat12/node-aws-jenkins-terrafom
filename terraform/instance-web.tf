@@ -1,6 +1,6 @@
 data "template_file" "web-shell-script" {
   template = file("scripts/user-data-web.sh")
-  vars {
+  vars = {
     API_HOSTNAME = aws_elb.api-elb.dns_name
     API_PORT     = "80"
     WEB_PORT     = var.WEB_PORT
