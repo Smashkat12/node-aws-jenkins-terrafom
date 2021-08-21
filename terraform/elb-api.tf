@@ -19,7 +19,7 @@ resource "aws_elb" "api-elb" {
   cross_zone_load_balancing   = true
   connection_draining         = true
   connection_draining_timeout = 400
-  tags {
+  tags = {
     Name = "my-elb"
   }
 }
@@ -42,7 +42,7 @@ resource "aws_security_group" "elb-securitygroup" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  tags {
+  tags = {
     Name = "api-elb"
   }
 }

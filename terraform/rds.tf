@@ -29,7 +29,7 @@ resource "aws_db_instance" "postgres" {
   skip_final_snapshot     = true
 
   enabled_cloudwatch_logs_exports = ["postgresql", "upgrade"]
-  tags {
+  tags = {
     Name = "postgresdb-instance"
   }
 }
@@ -51,7 +51,7 @@ resource "aws_security_group" "allow-postgresdb" {
     cidr_blocks = ["0.0.0.0/0"]
     self        = true
   }
-  tags {
+  tags = {
     Name = "allow-postgresdb"
   }
 }
