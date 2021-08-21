@@ -7,7 +7,7 @@ variable "API_PORT" {
 }
 
 variable "WEB_PORT" {
-  default =  "8080"
+  default = "8080"
 }
 
 variable "AWS_REGION" {
@@ -23,7 +23,7 @@ variable "PATH_TO_PUBLIC_KEY" {
 
 
 variable "AMIS" {
-  type = "map"
+  type = map(string)
   default = {
     us-east-1 = "ami-0f9cf087c1f27d9b1"
     us-west-2 = "ami-0653e888ec96eab9b"
